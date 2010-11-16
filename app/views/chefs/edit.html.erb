@@ -1,0 +1,16 @@
+<h1>Editing chef</h1>
+
+<% form_for(@chef) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @chef %> |
+<%= link_to 'Back', chefs_path %>

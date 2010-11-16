@@ -1,0 +1,186 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateChefs (20101116223415)
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "chefs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101116223415')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("chefs")[0m
+
+
+Processing ChefsController#index (for 127.0.0.1 at 2010-11-16 14:35:07) [GET]
+  [4;36;1mChef Load (0.6ms)[0m   [0;1mSELECT * FROM "chefs" [0m
+Rendering template within layouts/chefs
+Rendering chefs/index
+Completed in 115ms (View: 108, DB: 1) | 200 OK [http://localhost/chefs]
+
+
+Processing ChefsController#new (for 127.0.0.1 at 2010-11-16 14:35:35) [GET]
+Rendering template within layouts/chefs
+Rendering chefs/new
+
+ActionView::TemplateError (undefined method `username' for #<Chef id: nil, created_at: nil, updated_at: nil>) on line #8 of app/views/chefs/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :username %><br />
+8:     <%= f.text_field :username %>
+9:   </p>
+10:   <p>
+11:     <%= f.submit 'Create' %>
+
+    app/views/chefs/new.html.erb:8
+    app/views/chefs/new.html.erb:3
+    app/controllers/chefs_controller.rb:29:in `new'
+
+Rendered rescues/_trace (120.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateChefs (20101116223415)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("chefs")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateChefs (20101116223415)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (22.7ms)[0m   [0mDROP TABLE "chefs"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20101116223415'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateChefs (20101116223415)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "chefs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101116223415')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("chefs")[0m
+
+
+Processing ChefsController#index (for 127.0.0.1 at 2010-11-16 14:41:57) [GET]
+  [4;36;1mChef Load (0.6ms)[0m   [0;1mSELECT * FROM "chefs" [0m
+Rendering template within layouts/chefs
+Rendering chefs/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/chefs]
+
+
+Processing ChefsController#new (for 127.0.0.1 at 2010-11-16 14:41:59) [GET]
+Rendering template within layouts/chefs
+Rendering chefs/new
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/chefs/new]
+
+
+Processing ChefsController#create (for 127.0.0.1 at 2010-11-16 14:42:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"tjgWSEJn7YcBol2r1ghOyXZOPoXsZH2E4IOYh67DCj0=", "chef"=>{"username"=>"Kristal"}}
+  [4;35;1mChef Create (0.5ms)[0m   [0mINSERT INTO "chefs" ("updated_at", "username", "created_at") VALUES('2010-11-16 22:42:03', 'Kristal', '2010-11-16 22:42:03')[0m
+Redirected to http://localhost:3000/chefs/1
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/chefs]
+
+
+Processing ChefsController#show (for 127.0.0.1 at 2010-11-16 14:42:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChef Load (0.2ms)[0m   [0;1mSELECT * FROM "chefs" WHERE ("chefs"."id" = 1) [0m
+Rendering template within layouts/chefs
+Rendering chefs/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/chefs/1]
+
+
+Processing ChefsController#index (for 127.0.0.1 at 2010-11-16 14:42:05) [GET]
+  [4;35;1mChef Load (0.5ms)[0m   [0mSELECT * FROM "chefs" [0m
+Rendering template within layouts/chefs
+Rendering chefs/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/chefs]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateChefs (20101116223415)
+Migrating to CreateRecipeBoxes (20101116224421)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "recipe_boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101116224421')[0m
+Migrating to CreateRecipes (20101116224451)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101116224451')[0m
+Migrating to CreateRecipeCards (20101116224502)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "recipe_cards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101116224502')[0m
+Migrating to CreateHistories (20101116224513)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "histories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101116224513')[0m
+Migrating to CreateHistoryEntries (20101116224523)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "history_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101116224523')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("chefs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("histories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("history_entries")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("recipe_boxes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recipe_cards")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recipes")[0m

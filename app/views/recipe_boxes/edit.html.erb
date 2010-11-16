@@ -1,0 +1,12 @@
+<h1>Editing recipe_box</h1>
+
+<% form_for(@recipe_box) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @recipe_box %> |
+<%= link_to 'Back', recipe_boxes_path %>

@@ -1,4 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :history_entries
+
+  map.resources :histories
+
+  map.resources :recipe_cards
+
+  map.resources :recipes
+
+  map.resources :recipe_boxes
+
+  map.resources :chefs
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

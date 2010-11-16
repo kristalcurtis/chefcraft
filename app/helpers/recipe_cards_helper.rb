@@ -1,0 +1,2 @@
+module RecipeCardsHelper
+end

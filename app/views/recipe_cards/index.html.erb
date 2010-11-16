@@ -1,0 +1,18 @@
+<h1>Listing recipe_cards</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @recipe_cards.each do |recipe_card| %>
+  <tr>
+    <td><%= link_to 'Show', recipe_card %></td>
+    <td><%= link_to 'Edit', edit_recipe_card_path(recipe_card) %></td>
+    <td><%= link_to 'Destroy', recipe_card, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New recipe_card', new_recipe_card_path %>
